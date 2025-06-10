@@ -22,6 +22,13 @@ class TaskViewModel(private val repository: TaskRepository) : ViewModel() {
         }
     }
 
+    fun updateTask(task: Task, isCompleted: Boolean) {
+        viewModelScope.launch {
+            val updatedTask = task.copy(isCompleted = isCompleted)
+            repository.update(updatedTask)
+        }
+    }
+
     fun deleteTask(task: Task) {
         viewModelScope.launch {
             repository.delete(task)
