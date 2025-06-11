@@ -22,7 +22,7 @@ import com.example.focup.ui.theme.FocupTheme
 
 class MainActivity : ComponentActivity() {
     private val taskViewModel: TaskViewModel by viewModels {
-        TaskViewModelFactory((application as focupApplication).repository)
+        TaskViewModelFactory((application as FocupApplication).repository)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
