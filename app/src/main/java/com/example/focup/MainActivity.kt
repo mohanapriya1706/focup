@@ -106,7 +106,7 @@ fun TaskScreen(
                         onDelete = { onDeleteTask(task) },
                         onUpdate = { isCompleted -> onUpdateTask(task, isCompleted) }
                     )
-                    Divider()
+                    HorizontalDivider()
                 }
             }
         }
